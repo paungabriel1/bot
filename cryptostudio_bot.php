@@ -17,7 +17,7 @@ $post = file_get_contents('php://input');
 if (strlen($post) < 8)
     loadSite();
 $post = json_decode($post, true);
-$msg = $post['msg'];
+$msg = $post['message'];
 $iskbd = !$msg;
 if ($iskbd)
     $msg = $post['callback_query'];
